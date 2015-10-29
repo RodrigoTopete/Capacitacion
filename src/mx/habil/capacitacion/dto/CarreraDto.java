@@ -1,5 +1,9 @@
 package mx.habil.capacitacion.dto;
 
+<<<<<<< HEAD
+=======
+import java.io.Serializable;
+>>>>>>> 8f1b663c11714ac922280ab7f130b4c2799c3c63
 
 public class CarreraDto extends CapacitacionAbstractDto {
 
