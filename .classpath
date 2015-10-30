@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/junit-4.12.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/commons-collections-2.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/ehcache-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/cglib-2.1_3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/required/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/required/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/required/jandex-1.2.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/required/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Documents/Reportes/jta-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/org.apache.commons.pool.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-core-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/hibernate-core-4.3.8.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/hibernate-entitymanager-4.3.8.Final (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-orm-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-dao-2.0.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-context-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-beans-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-expression-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/required/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/hibernate-jpa-2.1-api-1.0.0.Final (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/hibernate-commons-annotations-4.0.3.final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-tx-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-jdbc-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-aop-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/spring-aspects-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/aspectjweaver-1.7.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/aspectjrt-1.7.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/poi-ooxml-schemas-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/xmlbeans-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/poi-ooxml-3.9 (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/poi-scratchpad-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/poi-excelant-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/Downloads/poi-examples-3.9.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

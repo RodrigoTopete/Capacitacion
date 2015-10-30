@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+            http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.1.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+
+	<!-- ### ARCHIVO DE CONFIGURACION - PROPERTIES ### -->
+	<bean id="SystemConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>file:/opt/SUNWappserver/conf/config.universidad.properties
+			</value>
+		</property>
+	</bean>
+	<!-- ### ARCHIVO DE CONFIGURACION - PROPERTIES ### -->
+
+	<bean id="DataSourceUniversidad" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>${driver}</value>
+		</property>
+		<property name="url">
+			<value>${url}</value>
+		</property>
+		<property name="username">
+			<value>${username}</value>
+		</property>
+		<property name="password">
+			<value>${password}</value>
+		</property>
+	</bean>
+
+
+	<bean id="SessionFactoryUniversidad"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="DataSourceUniversidad">
+		</property>
+		<property name="annotatedClasses">
+			<list>
+			
+			</list>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>mx/habil/capacitacion/dto/hbm/AlumnoDto.hbm.xml</value>
+				<value>mx/habil/capacitacion/dto/hbm/CarreraDto.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${dialect}</prop>
+				<prop key="hibernate.show_sql">${show_sql}</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="CarreraBo" class="mx.habil.capacitacion.bs.CarreraBo">
+
+
+	</bean>
+	<bean id="TransactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="SessionFactoryUniversidad" />
+	</bean>
+	
+	<aop:config>
+		<aop:pointcut expression="execution( * mx.habil.capacitacion.*bs.* (..) )"
+			id="BOMethods" />
+
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="BOMethods" />
+	</aop:config>
+
+	<tx:advice id="txAdvice" transaction-manager="TransactionManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="SUPPORTS" />
+		</tx:attributes>
+	</tx:advice>
+ 
+ 
+<!--  <tx:annotation-driven transaction-manager="txManager" />
+ --> 
+ 
+ 
+	<bean id="CarreraDao" class="mx.habil.capacitacion.dao.impl.CarreraDaoImpl">
+		<property name="sessionFactory" ref="SessionFactoryUniversidad" />
+		<property name="ql" ref="CarreraHQLHelper" />
+	</bean>
+
+	<bean id="AlumnoDao" class="mx.habil.capacitacion.dao.impl.AlumnoDaoImpl">
+		<property name="sessionFactory" ref="SessionFactoryUniversidad" />
+		<property name="ql" ref="AlumnoHQLHelper" />
+	</bean>
+
+
+	<bean id="CarreraHQLHelper" class="mx.habil.capacitacion.dao.hql.CarreraHQLHelper">
+		<property name="queries">
+			<map>
+				<entry key="RECUPERAR_POR_ID_CARRERA">
+					<value>
+						FROM CarreraDto carreraDto
+						WHERE carreraDto.idCarrera =
+						:idCarrera
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="AlumnoHQLHelper" class="mx.habil.capacitacion.dao.hql.AlumnoHQLHelper">
+		<property name="queries">
+			<map>
+				<entry key="RECUPERAR_POR_ID_ALUMNO">
+					<value>
+						FROM AlumnoDto alumnoDto
+						WHERE
+						alumnoDto.idAlumno = :idAlumno
+					</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+
+	
+
+</beans>
+
