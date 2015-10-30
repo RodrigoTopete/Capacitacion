@@ -1,7 +1,15 @@
 package mx.habil.capacitacion.dao.impl.test;
 
 import org.apache.log4j.Logger;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+import org.springframework.transaction.annotation.Transactional;
+>>>>>>> 8f1b663c11714ac922280ab7f130b4c2799c3c63
+>>>>>>> 371baf84ecf47365a50448b3e40f09f1b0b35f58
 
 import junit.framework.TestCase;
 import mx.habil.capacitacion.dao.CarreraDao;

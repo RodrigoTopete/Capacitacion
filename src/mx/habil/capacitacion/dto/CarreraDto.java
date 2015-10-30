@@ -1,5 +1,12 @@
 package mx.habil.capacitacion.dto;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import java.io.Serializable;
+>>>>>>> 8f1b663c11714ac922280ab7f130b4c2799c3c63
+>>>>>>> 371baf84ecf47365a50448b3e40f09f1b0b35f58
 
 public class CarreraDto extends CapacitacionAbstractDto {
 
@@ -8,6 +15,7 @@ public class CarreraDto extends CapacitacionAbstractDto {
 	private Integer idCarrera;
 	private String nombre;
 	private String edificio;
+<<<<<<< HEAD
 	
 	public CarreraDto(){
 		
@@ -20,6 +28,8 @@ public class CarreraDto extends CapacitacionAbstractDto {
 		this.laboratorio = laboratorio;
 	}
 
+=======
+>>>>>>> 371baf84ecf47365a50448b3e40f09f1b0b35f58
 	private String jefeCarrera;
 	private String laboratorio;
 
